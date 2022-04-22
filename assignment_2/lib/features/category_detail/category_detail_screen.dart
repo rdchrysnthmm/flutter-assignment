@@ -17,12 +17,13 @@ class CategoryDetailPage extends ConsumerWidget {
     return Scaffold(
         appBar: const MyAppBar(title: "Masak Apa",),
         body: _state.when(
-          loading: () => Center(child: const CircularProgressIndicator()),
+          loading: () => const Center(child: CircularProgressIndicator()),
           error: (exception, stackTrace) {
             return const Center(child: Text("Something went wrong"));
           },
           data: (details) {
             return ListView.builder(
+              key: const Key("ListView"),
               shrinkWrap: true,
               itemCount: details.results.length,
               itemBuilder: (BuildContext context, int index) {

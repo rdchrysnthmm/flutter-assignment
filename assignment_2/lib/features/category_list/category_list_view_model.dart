@@ -1,7 +1,7 @@
 import 'package:assignment_2/models/response_category.dart';
 import 'package:assignment_2/repositories/category%20_repository/category_repository_provider.dart';
+import 'package:assignment_2/repositories/category%20_repository/i_category_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../repositories/category _repository/i_category_repository.dart';
 
 final categoryListProvider =
 StateNotifierProvider<CategoryListViewModel, AsyncValue<ResponseCategory>>((ref) {

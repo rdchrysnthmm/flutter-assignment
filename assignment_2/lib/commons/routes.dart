@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../features//category_detail/category_detail_screen.dart';
-import '../features//category_list/category_list_screen.dart';
-import '../features//recipe_detail/recipe_detail_screen.dart';
+import '../features/category_detail/category_detail_screen.dart';
+import '../features/category_list/category_list_screen.dart';
+import '../features/recipe_detail/recipe_detail_screen.dart';
 
 class MyRoutes {
   static const String HOME_SCREEN = "/";

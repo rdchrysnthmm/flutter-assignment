@@ -1,5 +1,5 @@
 import 'package:assignment_2/models/response_recipe.dart';
-import 'package:assignment_2/screens/recipe_detail/recipe_detail_view_model.dart';
+import 'package:assignment_2/features/recipe_detail/recipe_detail_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../widgets/app_bar.dart';
