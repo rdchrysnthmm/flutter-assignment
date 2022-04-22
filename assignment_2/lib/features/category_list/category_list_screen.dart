@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../commons/routes.dart';
 import '../../widgets/app_bar.dart';
-import 'category_list_provider.dart';
+import 'category_list_view_model.dart';
 
 class CategoriesPage extends ConsumerWidget{
   const CategoriesPage({Key? key}) : super(key: key);

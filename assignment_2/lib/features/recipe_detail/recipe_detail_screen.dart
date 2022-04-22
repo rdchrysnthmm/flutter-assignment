@@ -1,9 +1,7 @@
-import 'package:assignment_2/models/response_category.dart';
 import 'package:assignment_2/models/response_recipe.dart';
-import 'package:assignment_2/screens/recipe_detail/recipe_detail_provider.dart';
+import 'package:assignment_2/screens/recipe_detail/recipe_detail_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../commons/routes.dart';
 import '../../widgets/app_bar.dart';
 
 class RecipeDetailPage extends ConsumerWidget {
@@ -100,9 +98,9 @@ class RecipeDetailPage extends ConsumerWidget {
                       shrinkWrap: true,
                       itemCount: recipe.results.ingredient.length,
                       itemBuilder: (context, index) => Row(
-                        children: [
+                        children: [Expanded(child:
                           Text(recipe.results.ingredient[index],
-                          style: TextStyle(fontSize: 20),),
+                          style: const TextStyle(fontSize: 20),),),
                         ],
                       ),
                     ),

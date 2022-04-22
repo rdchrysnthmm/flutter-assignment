@@ -1,20 +1,12 @@
 import 'package:assignment_2/providers/http_client_provider.dart';
-import 'package:riverpod/riverpod.dart';
-import '../models/response_recipe.dart';
+import '../../models/response_recipe.dart';
+import 'i_recipe_repository.dart';
 
-final recipeDataSourceProvider = Provider<RecipeDataSource>((ref){
-  return HttpRecipeDataSource(ref.read(httpClientProvider));
-});
-
-abstract class RecipeDataSource{
-  Future<ResponseRecipe> getRecipe(String key);
-}
-
-class HttpRecipeDataSource implements RecipeDataSource{
+class HttpRecipeDataRepository implements RecipeRepository{
   final HttpClient _httpClient;
   final String baseUrl = "https://masak-apa.tomorisakura.vercel.app/api/recipe/";
 
-  HttpRecipeDataSource(this._httpClient);
+  HttpRecipeDataRepository(this._httpClient);
 
   @override
   Future<ResponseRecipe> getRecipe(String key) {

@@ -72,12 +72,12 @@ class RecipeCard extends StatelessWidget {
                       recipe.thumb,
                       fit: BoxFit.cover,
                     ),
-                  ),
+                  ),/*
                   Positioned(
                     child: _buildFavoriteButton(),
                     top: 2.0,
                     right: 2.0,
-                  ),
+                  ),*/
                 ],
               ),
               _buildTitleSection(),

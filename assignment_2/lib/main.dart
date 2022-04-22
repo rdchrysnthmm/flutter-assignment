@@ -1,4 +1,4 @@
-import 'package:assignment_2/screens/category_list/category_list_screen.dart';
+import 'package:assignment_2/features//category_list/category_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

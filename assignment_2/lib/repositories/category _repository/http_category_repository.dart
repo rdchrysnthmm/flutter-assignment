@@ -1,23 +1,13 @@
 import 'package:assignment_2/models/response_category.dart';
 import 'package:assignment_2/models/response_category_detail.dart';
 import 'package:assignment_2/providers/http_client_provider.dart';
-import 'package:riverpod/riverpod.dart';
+import 'i_category_repository.dart';
 
-
-final categoryDataSourceProvider = Provider<CategoryDataSource>((ref){
-  return HttpCategoryDataSource(ref.read(httpClientProvider));
-});
-
-abstract class CategoryDataSource{
-  Future<ResponseCategory> getCategory();
-  Future<ResponseCategoryDetail> getCategoryDetail(String key);
-}
-
-class HttpCategoryDataSource implements CategoryDataSource{
+class HttpCategoryRepository implements CategoryRepository{
   final HttpClient _httpClient;
   final String baseUrl = "https://masak-apa.tomorisakura.vercel.app/api/categorys/recipes/";
 
-  HttpCategoryDataSource(this._httpClient);
+  HttpCategoryRepository(this._httpClient);
 
   @override
   Future<ResponseCategory> getCategory()  async {
